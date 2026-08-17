@@ -13,7 +13,6 @@ function App() {
     { id: 5, text: "Build Todo App", completed: true }
   ]);
 
-  // Add todo (Increases Total)
   const addTodo = (text) => {
     if (!text.trim()) return;
     const newTodo = {
@@ -24,7 +23,6 @@ function App() {
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
-  // Toggle todo state (Check/Uncheck)
   const toggleTodo = (id) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
@@ -33,7 +31,6 @@ function App() {
     );
   };
 
-  // Delete todo (Decreases Total)
   const deleteTodo = (id) => {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
